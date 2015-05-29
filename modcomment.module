@@ -8,5 +8,8 @@ function modcomment_form_alter(&$form, &$form_state, &$form_id) {
         print '<pre>';
         print_r ($form);
         print '<pre>';
+
+        //remove the subject field
+        unset($form['subject']);
     }
 }
