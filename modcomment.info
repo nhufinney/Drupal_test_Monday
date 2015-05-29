@@ -1,0 +1,5 @@
+name = Modify Comment Form
+description = Removes the subject field from the comment form
+package = Epicodus Practice
+core = 7.x
+files[] = modcomment.module
