@@ -1,6 +1,12 @@
 <?php
 
 function modcomment_form_alter(&$form, &$form_state, &$form_id) {
-    print_r($form_id);
-    print_r("<br>");
+    // print_r($form_id);
+    // print_r("<br>");
+
+    if($form_id == 'comment_node_page_form') {
+        print '<pre>';
+        print_r ($form);
+        print '<pre>';
+    }
 }
