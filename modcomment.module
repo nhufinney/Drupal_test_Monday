@@ -13,6 +13,6 @@ function modcomment_form_alter(&$form, &$form_state, &$form_id) {
         unset($form['subject']);
 
         //hide user name in comment form
-        $form['author']['#title']['#default_value'] = 0;
+        $form['author']['_author']['#default_value'] = 0;
     }
 }
