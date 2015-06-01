@@ -12,7 +12,7 @@ function modcomment_form_alter(&$form, &$form_state, &$form_id) {
         //remove the subject field
         unset($form['subject']);
 
-        //hide user name in comment form
-        $form['author']['#access'] = FALSE;
+        // //hide user name in comment form
+        // $form['author']['#access'] = FALSE;
     }
 }

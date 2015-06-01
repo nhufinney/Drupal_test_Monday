@@ -3,3 +3,5 @@ description = Removes the subject field from the comment form
 package = Epicodus Examples
 core = 7.x
 files[] = modcomment.module
+files[] = tests/modcomment.test
+dependencies = simpletest
