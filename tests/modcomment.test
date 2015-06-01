@@ -27,6 +27,18 @@ class ModcommentTests extends DrupalWebTestCase {
         $info = array();
         $info['title'] = "Welcome!";
         $info["body[und][0][value]"] = "Welcome to Cameron's!";
+        // $form['subject'] = "subject";
+        $form['subject'] = array(
+          '#type' => 'textfield',
+          '#title' => t('Subject'),
+          'id'=> 'comment_node_page_form',
+        );
+        $form['name'] = array(
+          '#type' => 'textfield',
+          '#title' => t('Name'),
+
+        );
+
 
         //save the new page
         $this->drupalPost('node/add/page', $info, t('Save'));
@@ -40,8 +52,29 @@ class ModcommentTests extends DrupalWebTestCase {
 
     public function testModcommentTest(){
         $this->drupalGet('welcome_new_user');
-        $this->assertText("Welcome to Cameron's!", 'the text on the page, check it out');
+        $this->assertTitle("subject", 'the text on the page, wrong');
     }
 
 
 }
+
+///////////////
+// function form_example_tutorial_2($form, &$form_state) {
+//   $form['description'] = array(
+//     '#type' => 'item',
+//     '#title' => t('A simple form with a submit button'),
+//   );
+//
+//   $form['name'] = array(
+//     '#type' => 'textfield',
+//     '#title' => t('Name'),
+//   );
+//
+//   // Adds a simple submit button that refreshes the form and clears its
+//   // contents. This is the default behavior for forms.
+//   $form['submit'] = array(
+//     '#type' => 'submit',
+//     '#value' => 'Submit',
+//   );
+//   return $form;
+// }
